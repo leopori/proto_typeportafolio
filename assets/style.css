@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: local;
+}
+
+/* Lo siguewnte quiuita la barra*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/*Cuerpo de mi web page*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700px;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+section::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front {
+    z-index: 10;
+}
+
+h3 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-width: fit-content;
+    max-width: fit-content;
+}
+
+#text {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 10vh;
+    z-index: 9;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+    display: flex;
+
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/*Todo lo que va en los posts*/
+
+
+.howami {
+    margin: 0 auto;
+    width: auto;
+    height: auto;    
+    align-items: center;
+
+}
+
+.howami h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.howami p{
+    font-size: 1.2em;
+    color: #fff;
+}
+
+
+.aboutme {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.about-info {
+    grid-column: 5/10;
+    padding: 3em;
+}
+
+.divider {
+    height: 4px;
+    width: 150px;
+    background-color: #7597de;
+    margin-top: 5px;
+    margin-bottom: 2em;
+}
+
+.work, .contact, .howami {
+    width: 100vw;
+    justify-content: center;
+    position: relative;
+    padding: 5em;
+    background: #1c0522;
+}
+
+.work h3 {
+    font-size: 4rem;
+
+}
+
+.bkbox {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 100px;
+
+}
+
+.box {
+
+    position: relative;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: 0.5s;
+    background: #1c0522;
+
+}
+
+.box:hover {
+    height: 400px;
+}
+
+.box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden;
+
+
+}
+
+.bkbox .box .imgBX img {
+    max-width: 100px;
+    max-height: 100px;
+    opacity: 0.1;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+
+
+}
+
+.tamimg{
+    object-fit: fill;
+    width: auto;
+    height: auto;
+    max-width: 130%;
+    max-height: 150%;
+    align-items: center;
+}
+
+.box:hover .imgBX img {
+    opacity: 1;
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+
+.box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box:before,
+.box:after {
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after {
+    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
+}
+
+.box .card-tittle {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+
+
+}
+
+.knowledge {
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+} 
+
+.knowledge li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.knowledge li img{
+    display: block;
+    padding: 0 10px;
+
+}
+
+
+.redes {
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+} 
+
+.redes li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.redes li a{
+    display: block;
+    padding: 0 10px;
+
+}
+
+
+
+
+.box:hover .card-tittle {
+    opacity: 1;
+
+}
+
+.box .card-tittle h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.box .card-tittle span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+/*animacion de imagenes*/
+
+
+.pimg {
+    width: 402px;
+    border: #2b1055;
+    height: 503px;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.pimg:hover {
+    transform: scale(1.2);
+}
+
+.simg {
+    width: 700px;
+    border: #2b1055;
+    height: 500px;
+    align-items: middle;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    grid-column: 1/5;
+}
+
+.simg:hover {
+    transform: scale(1.2);
+}
+
+/*Go Top*/
+
+.gotopcontainer {
+    position: fixed;
+    z-index: 1000;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+ }
+ 
+ .gotopbutton {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(115%, 115%);
+    z-index: 20000;
+ }
+ 
+ .gotopbutton img {
+    background-color: transparent;
+    width: 30px;
+ }
+ 
+ .gotopbutton i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #2196f3;
+    transition: 0.2s;
+    z-index: 21000;
+ }
+ 
+ .show {
+    z-index: 20000;
+ }
+ 
+ .show .gotopbutton {
+    animation: popup 0.3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+ }
+ 
+ .show img {
+    transform: translate(-50%, -50%) scale(1);
+ }
+ 
+ @keyframes popup {
+    0% {
+       width: 0rem;
+       height: 0rem;
+    }
+    50% {
+       width: 8rem;
+       height: 8rem;
+    }
+    100% {
+       width: 6.6rem;
+       height: 6.6rem;
+    }
+ }
+ 
